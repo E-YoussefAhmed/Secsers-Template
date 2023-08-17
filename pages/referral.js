@@ -50,10 +50,10 @@ const Referral = () => {
                 Referral Link
               </h2>
               <p className="md:h-[130px] rounded-lg border-[5px] border-primary flex justify-center items-center text-lg md:text-2xl font-normal mt-8 p-5 md:p-11">
-                {`http://localhost:3000/?referral=${session.user.referralCode}`}
+                {`https://scorpions-template.vercel.app/?referral=${session.user.referralCode}`}
                 <CopyToClipboard
                   onCopy={() => setCopied(true)}
-                  text={`http://localhost:3000/?referral=${session.user.referralCode}`}
+                  text={`https://scorpions-template.vercel.app/?referral=${session.user.referralCode}`}
                 >
                   <button>
                     <FaRegCopy className="mx-6" />
