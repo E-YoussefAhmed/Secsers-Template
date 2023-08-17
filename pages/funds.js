@@ -29,7 +29,7 @@ const Funds = () => {
       variants={parentVariants}
       initial="hide"
       animate="show"
-      className="flex items-center flex-1 flex-col overflow-y-auto pt-28 pb-44
+      className="flex items-center flex-1 flex-col overflow-y-auto lg:pt-28 pt-10 pb-44
       lg:pb-60 px-10 text-center"
     >
       <motion.h1
@@ -41,7 +41,7 @@ const Funds = () => {
       </motion.h1>
       <motion.h2
         variants={variants}
-        className="lg:text-5xl text-3xl font-bold mt-28"
+        className="lg:text-5xl text-3xl font-bold lg:mt-28 mt-10"
       >
         Send The Amount to This Number
       </motion.h2>
