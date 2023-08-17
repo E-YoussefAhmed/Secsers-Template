@@ -2,26 +2,150 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap");
+* {
+  outline: none;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Inter", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  /* direction: rtl; */
+}
+.active-link {
+  @apply my-4 flex items-center text-sm py-2 lg:rounded-s lg:rounded-e-xl rounded-xl px-2 lg:px-0 mx-2 lg:mx-0 font-bold bg-primary transition-colors duration-300;
+}
+.link {
+  @apply my-4 flex items-center text-sm py-2 lg:rounded-s lg:rounded-e-xl rounded-xl px-2 lg:px-0 mx-2 lg:mx-0 font-bold transition-colors duration-300;
+}
+.link:hover {
+  @apply bg-primary/80;
+}
+.active-link-icon {
+  @apply mx-2 text-white transition-colors duration-300;
+}
+.link-icon {
+  @apply mx-2 text-primary transition-colors duration-300;
+}
+.link:hover .link-icon {
+  @apply mx-2 text-white;
+}
+.active-filter {
+  @apply px-2 py-3 my-2 rounded mx-4 bg-primary text-xs font-bold flex items-center transition-colors duration-300;
+}
+.filter {
+  @apply px-2 py-3 my-2 rounded mx-4 bg-[#13064A] text-xs font-bold flex items-center transition-colors duration-300;
+}
+.filter:hover {
+  @apply bg-primary/80;
+}
+.history {
+  @apply grid gap-3 min-w-[1000px];
+  grid-template-columns: 2fr 2fr 3fr 1fr 2fr 1fr 3fr 1fr 2fr;
+}
+/* The Ant Design Select */
+
+/* The select div */
+.ant-select-show-search:where(
+    .css-dev-only-do-not-override-byeoj0
+  ).ant-select:not(.ant-select-customize-input)
+  .ant-select-selector,
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-single:not(
+    .ant-select-customize-input
+  )
+  .ant-select-selector {
+  @apply cursor-pointer outline-none bg-input-secondary text-white rounded-lg h-10 border-none shadow-none flex;
+}
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-single {
+  @apply w-[95%] bg-input-secondary rounded-lg;
+}
+/* The placeholder when menu is open */
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-single.ant-select-open
+  .ant-select-selection-item {
+  @apply text-white/25;
+}
+/* The input field */
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-single:not(
+    .ant-select-customize-input
+  )
+  .ant-select-selector
+  .ant-select-selection-search-input {
+  @apply h-10 p-2;
+}
+/* To align the placeholder in the middle */
+:where(
+    .css-dev-only-do-not-override-byeoj0
+  ).ant-select-single.ant-select-show-arrow
+  .ant-select-selection-item,
+:where(
+    .css-dev-only-do-not-override-byeoj0
+  ).ant-select-single.ant-select-show-arrow
+  .ant-select-selection-placeholder {
+  @apply flex items-center;
+}
+/* The icon color */
+:where(.css-dev-only-do-not-override-byeoj0).ant-select .ant-select-arrow {
+  @apply text-white;
+}
+/* The clear icon background */
+:where(.css-dev-only-do-not-override-byeoj0).ant-select .ant-select-clear {
+  @apply bg-input-secondary;
+}
+/* To hide border while hover */
+:where(.css-dev-only-do-not-override-byeoj0).ant-select:not(
+    .ant-select-disabled
+  ):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover
+  .ant-select-selector {
+  @apply border-none;
+}
+/* To hide border while active */
+.ant-select-focused:where(.css-dev-only-do-not-override-byeoj0).ant-select:not(
+    .ant-select-disabled
+  ):not(.ant-select-customize-input):not(.ant-pagination-size-changer)
+  .ant-select-selector {
+  @apply border-none shadow-none;
+}
+/* The dropdown menu */
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-dropdown {
+  @apply bg-input-secondary;
+}
+/* The Item div while active */
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-dropdown
+  .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  @apply text-white bg-primary/70;
+}
+/* The Item div while selected */
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-dropdown
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  @apply text-white bg-primary;
+}
+/* The Item div active and not */
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-dropdown
+  .ant-select-item {
+  @apply text-base font-bold text-white;
+}
+
+/* The Date Picker */
+
+/* Date picker div */
+:where(.css-dev-only-do-not-override-byeoj0).ant-picker {
+  @apply cursor-pointer outline-none bg-input-secondary text-white h-10 border-none w-[95%] shadow-none flex;
+}
+/* Div while hover and focus */
+:where(.css-dev-only-do-not-override-byeoj0).ant-picker:hover,
+:where(.css-dev-only-do-not-override-byeoj0).ant-picker-focused {
+  @apply border-none;
+}
+/* The input */
+:where(.css-dev-only-do-not-override-byeoj0).ant-picker
+  .ant-picker-input
+  > input {
+  @apply text-white bg-transparent border-none;
+}
+/* The calender icon */
+:where(.css-dev-only-do-not-override-byeoj0).ant-picker .ant-picker-suffix {
+  @apply text-white;
+}
+/* The clear icon */
+:where(.css-dev-only-do-not-override-byeoj0).ant-picker .ant-picker-clear {
+  @apply bg-white rounded-full end-[-2px];
 }
