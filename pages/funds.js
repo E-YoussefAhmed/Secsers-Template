@@ -43,7 +43,7 @@ const Funds = () => {
         variants={variants}
         className="lg:text-5xl text-3xl font-bold lg:mt-28 mt-10"
       >
-        Send The Amount to This Number
+        Please Send a Message to This Number
       </motion.h2>
       <motion.h2
         variants={variants}
@@ -52,15 +52,13 @@ const Funds = () => {
         +20 123 456 7890
       </motion.h2>
       <motion.h2 variants={variants} className="lg:text-5xl text-3xl font-bold">
-        Via Vodafone Cash
+        Via Whatsapp
       </motion.h2>
       <motion.h3
         variants={variants}
         className="lg:text-[40px] text-2xl font-bold mt-14"
       >
-        Then Contact Our Admin With Your{" "}
-        <span className="text-primary">ID</span>&
-        <span className="text-primary">Screenshot</span>
+        And Contact Us With The <span className="text-primary">Amount</span>{" "}
       </motion.h3>
       <motion.div variants={variants}>
         <FaArrowDownLong className="my-4" size={93} />
