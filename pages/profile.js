@@ -191,7 +191,7 @@ const Profile = () => {
                   >
                     Verify Your Email Address
                     <Tooltip
-                      title="Your won't be able to change your email or password or do forgot password method until you verify your email!"
+                      title="Your won't be able to change your email or password until you verify your email!"
                       color="#E94B19"
                     >
                       <BsExclamationCircle className="inline-block mx-2" />

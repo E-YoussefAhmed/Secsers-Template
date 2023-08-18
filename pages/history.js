@@ -28,7 +28,7 @@ const History = () => {
   };
 
   return (
-    <section className="flex  items-center flex-1 flex-col pt-10 pb-44 overflow-y-auto px-7">
+    <section className="flex  items-center flex-1 flex-col pt-4 pb-44 overflow-y-auto px-7">
       <div className="w-full flex flex-col-reverse lg:flex-row lg:justify-between">
         <motion.ul
           initial={{ opacity: 0, x: -200 }}
@@ -42,7 +42,7 @@ const History = () => {
               filter === null ? "active-filter" : "filter"
             } cursor-pointer select-none`}
           >
-            <FaFilter className="me-2" size={13} />
+            <FaFilter className="md:me-2 me-1" size={13} />
             All
           </li>
           <li
@@ -51,7 +51,7 @@ const History = () => {
               filter === "Pending" ? "active-filter" : "filter"
             } cursor-pointer select-none`}
           >
-            <FaFileImport className="me-2" size={13} />
+            <FaFileImport className="md:me-2 me-1" size={13} />
             Pending
           </li>
           <li
@@ -60,7 +60,7 @@ const History = () => {
               filter === "In Progress" ? "active-filter" : "filter"
             } cursor-pointer select-none`}
           >
-            <FaSpinner className="me-2" size={13} />
+            <FaSpinner className="md:me-2 me-1" size={13} />
             In Progress
           </li>
           <li
@@ -69,7 +69,7 @@ const History = () => {
               filter === "Completed" ? "active-filter" : "filter"
             } cursor-pointer select-none`}
           >
-            <FaRegCircleCheck className="me-2" size={13} />
+            <FaRegCircleCheck className="md:me-2 me-1" size={13} />
             Completed
           </li>
           <li
@@ -78,7 +78,7 @@ const History = () => {
               filter === "Partial" ? "active-filter" : "filter"
             } cursor-pointer select-none`}
           >
-            <FaHourglassStart className="me-2" size={13} />
+            <FaHourglassStart className="md:me-2 me-1" size={13} />
             Partial
           </li>
           <li
@@ -87,7 +87,7 @@ const History = () => {
               filter === "Processing" ? "active-filter" : "filter"
             } cursor-pointer select-none`}
           >
-            <FaBarsProgress className="me-2" size={13} />
+            <FaBarsProgress className="md:me-2 me-1" size={13} />
             Processing
           </li>
           <li
@@ -96,7 +96,7 @@ const History = () => {
               filter === "Canceled" ? "active-filter" : "filter"
             } cursor-pointer select-none`}
           >
-            <FaBan className="me-2" size={13} />
+            <FaBan className="md:me-2 me-1" size={13} />
             Canceled
           </li>
         </motion.ul>
@@ -179,37 +179,37 @@ const History = () => {
                 {filteredData.map((order) => (
                   <div
                     key={order._id}
-                    className="my-3 border rounded px-2 py-5 text-base font-bold history"
+                    className="my-3 border rounded md:px-2 md:py-5 p-1 px-2 py-5 text-base font-bold history"
                   >
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.id}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {new Date(order.date).getFullYear()}-
                       {new Date(order.date).getMonth() + 1}-
                       {new Date(order.date).getDate()}{" "}
                       {new Date(order.date).getHours()}:
                       {new Date(order.date).getMinutes()}
                     </div>
-                    <div className=" flex justify-center items-center">
+                    <div className=" flex justify-center items-center text-xs md:text-base">
                       {order.serviceLink}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.charge}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.startCount && order.startCount}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.quantity}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.name}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.remains}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       <span
                         className={`${
                           order.status === "Completed"
@@ -248,37 +248,37 @@ const History = () => {
                 {filteredData.map((order) => (
                   <div
                     key={order._id}
-                    className="my-3 border rounded px-2 py-5 text-base font-bold history"
+                    className="my-3 border rounded md:px-2 md:py-5 p-1 text-base font-bold history"
                   >
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.id}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {new Date(order.date).getFullYear()}-
                       {new Date(order.date).getMonth() + 1}-
                       {new Date(order.date).getDate()}{" "}
                       {new Date(order.date).getHours()}:
                       {new Date(order.date).getMinutes()}
                     </div>
-                    <div className=" flex justify-center items-center">
+                    <div className=" flex justify-center items-center text-xs md:text-base">
                       {order.serviceLink}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.charge}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.startCount && order.startCount}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.quantity}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.name}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.remains}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       <span
                         className={`${
                           order.status === "Completed"
@@ -315,36 +315,36 @@ const History = () => {
             ) : (
               <>
                 {data.orders.map((order) => (
-                  <div className="my-3 border rounded px-2 py-5 text-base font-bold history">
-                    <div className="flex justify-center items-center">
+                  <div className="my-3 border rounded md:px-2 md:py-5 p-1 text-base font-bold history">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.id}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {new Date(order.date).getFullYear()}-
                       {new Date(order.date).getMonth() + 1}-
                       {new Date(order.date).getDate()}{" "}
                       {new Date(order.date).getHours()}:
                       {new Date(order.date).getMinutes()}
                     </div>
-                    <div className=" flex justify-center items-center">
+                    <div className=" flex justify-center items-center text-xs md:text-base">
                       {order.serviceLink}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.charge}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.startCount && order.startCount}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.quantity}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.name}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       {order.remains}
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center text-xs md:text-base">
                       <span
                         className={`${
                           order.status === "Completed"

@@ -34,7 +34,7 @@ const Funds = () => {
     >
       <motion.h1
         variants={variants}
-        className="flex items-center uppercase font-bold text-4xl lg:text-6xl"
+        className="flex items-center uppercase font-bold text-2xl lg:text-6xl"
       >
         <FaWallet className="mx-7" size={74} color="#E94B19" />
         HOW TO ADD FUNDS

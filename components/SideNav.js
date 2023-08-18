@@ -35,7 +35,13 @@ const SideNav = () => {
                       : "link-icon"
                   }`}
                 />
-                New Order
+                <span
+                  className={`${
+                    router.asPath === "/order" ? "" : "hidden sm:inline"
+                  }`}
+                >
+                  New Order
+                </span>
               </li>
             </Link>
             <Link href="/history">
@@ -52,7 +58,13 @@ const SideNav = () => {
                       : "link-icon"
                   }`}
                 />
-                History
+                <span
+                  className={`${
+                    router.asPath === "/history" ? "" : "hidden sm:inline"
+                  }`}
+                >
+                  History
+                </span>
               </li>
             </Link>
             <Link href="/referral">
@@ -69,7 +81,13 @@ const SideNav = () => {
                       : "link-icon"
                   }`}
                 />
-                Referrals
+                <span
+                  className={`${
+                    router.asPath === "/referral" ? "" : "hidden sm:inline"
+                  }`}
+                >
+                  Referrals
+                </span>
               </li>
             </Link>
             <Link href="/funds">
@@ -86,7 +104,13 @@ const SideNav = () => {
                       : "link-icon"
                   }`}
                 />
-                Add Funds
+                <span
+                  className={`${
+                    router.asPath === "/funds" ? "" : "hidden sm:inline"
+                  }`}
+                >
+                  Add Funds
+                </span>
               </li>
             </Link>
           </ul>

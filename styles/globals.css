@@ -30,10 +30,10 @@ body {
   @apply mx-2 text-white;
 }
 .active-filter {
-  @apply px-2 py-3 my-2 rounded mx-4 bg-primary text-xs font-bold flex items-center transition-colors duration-300;
+  @apply px-1 py-1 m-1 md:my-2 rounded md:mx-4 bg-primary text-[10px] font-bold flex items-center transition-colors duration-300;
 }
 .filter {
-  @apply px-2 py-3 my-2 rounded mx-4 bg-[#13064A] text-xs font-bold flex items-center transition-colors duration-300;
+  @apply px-1 py-1 m-1 md:my-2 rounded md:mx-4 bg-[#13064A] text-[10px] font-bold flex items-center transition-colors duration-300;
 }
 .filter:hover {
   @apply bg-primary/80;
@@ -121,7 +121,14 @@ body {
 /* The Item div active and not */
 :where(.css-dev-only-do-not-override-byeoj0).ant-select-dropdown
   .ant-select-item {
-  @apply text-base font-bold text-white;
+  @apply text-base font-bold text-white border-white border p-4;
+}
+/* The Item text active and not */
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-dropdown
+  .ant-select-item-option-content {
+  overflow: initial;
+  white-space: initial;
+  text-overflow: initial;
 }
 
 /* The Date Picker */
@@ -149,80 +156,96 @@ body {
 :where(.css-dev-only-do-not-override-byeoj0).ant-picker .ant-picker-clear {
   @apply bg-white rounded-full end-[-2px];
 }
+
 /* The Ant Design Select */
 /* For the Production */
 
 /* The select div */
-.ant-select-show-search:where(.css-byeoj0).ant-select:not(
+.ant-select-show-search:where(
+    .css-dev-only-do-not-override-byeoj0
+  ).ant-select:not(.ant-select-customize-input)
+  .ant-select-selector,
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-single:not(
     .ant-select-customize-input
   )
-  .ant-select-selector,
-:where(.css-byeoj0).ant-select-single:not(.ant-select-customize-input)
   .ant-select-selector {
   @apply cursor-pointer outline-none bg-input-secondary text-white rounded-lg h-10 border-none shadow-none flex;
 }
-:where(.css-byeoj0).ant-select-single {
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-single {
   @apply w-[95%] bg-input-secondary rounded-lg;
 }
 /* The placeholder when menu is open */
-:where(.css-byeoj0).ant-select-single.ant-select-open
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-single.ant-select-open
   .ant-select-selection-item {
   @apply text-white/25;
 }
 /* The input field */
-:where(.css-byeoj0).ant-select-single:not(.ant-select-customize-input)
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-single:not(
+    .ant-select-customize-input
+  )
   .ant-select-selector
   .ant-select-selection-search-input {
   @apply h-10 p-2;
 }
 /* To align the placeholder in the middle */
-:where(.css-byeoj0).ant-select-single.ant-select-show-arrow
+:where(
+    .css-dev-only-do-not-override-byeoj0
+  ).ant-select-single.ant-select-show-arrow
   .ant-select-selection-item,
-:where(.css-byeoj0).ant-select-single.ant-select-show-arrow
+:where(
+    .css-dev-only-do-not-override-byeoj0
+  ).ant-select-single.ant-select-show-arrow
   .ant-select-selection-placeholder {
   @apply flex items-center;
 }
 /* The icon color */
-:where(.css-byeoj0).ant-select .ant-select-arrow {
+:where(.css-dev-only-do-not-override-byeoj0).ant-select .ant-select-arrow {
   @apply text-white;
 }
 /* The clear icon background */
-:where(.css-byeoj0).ant-select .ant-select-clear {
+:where(.css-dev-only-do-not-override-byeoj0).ant-select .ant-select-clear {
   @apply bg-input-secondary;
 }
 /* To hide border while hover */
-:where(.css-byeoj0).ant-select:not(.ant-select-disabled):not(
-    .ant-select-customize-input
-  ):not(.ant-pagination-size-changer):hover
+:where(.css-dev-only-do-not-override-byeoj0).ant-select:not(
+    .ant-select-disabled
+  ):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover
   .ant-select-selector {
   @apply border-none;
 }
 /* To hide border while active */
-.ant-select-focused:where(.css-byeoj0).ant-select:not(.ant-select-disabled):not(
-    .ant-select-customize-input
-  ):not(.ant-pagination-size-changer)
+.ant-select-focused:where(.css-dev-only-do-not-override-byeoj0).ant-select:not(
+    .ant-select-disabled
+  ):not(.ant-select-customize-input):not(.ant-pagination-size-changer)
   .ant-select-selector {
   @apply border-none shadow-none;
 }
 /* The dropdown menu */
-:where(.css-byeoj0).ant-select-dropdown {
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-dropdown {
   @apply bg-input-secondary;
 }
 /* The Item div while active */
-:where(.css-byeoj0).ant-select-dropdown
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-dropdown
   .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
   @apply text-white bg-primary/70;
 }
 /* The Item div while selected */
-:where(.css-byeoj0).ant-select-dropdown
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-dropdown
   .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
   @apply text-white bg-primary;
 }
 /* The Item div active and not */
-:where(.css-byeoj0).ant-select-dropdown .ant-select-item {
-  @apply text-base font-bold text-white;
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-dropdown
+  .ant-select-item {
+  @apply text-base font-bold text-white border-white border p-4;
 }
-
+/* The Item text active and not */
+:where(.css-dev-only-do-not-override-byeoj0).ant-select-dropdown
+  .ant-select-item-option-content {
+  overflow: initial;
+  white-space: initial;
+  text-overflow: initial;
+}
 /* The Date Picker */
 
 /* Date picker div */

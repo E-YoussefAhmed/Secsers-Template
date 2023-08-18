@@ -31,7 +31,7 @@ const Navbar = () => {
       transition={{ duration: 0.5, type: "tween" }}
       className={`${
         router.pathname === "/" ? "hidden" : "flex"
-      } w-full h-[104px] bg-navbar py-6 px-10 justify-between items-center`}
+      } w-full md:h-[104px] bg-navbar py-2 md:py-6 px-10 justify-between items-center`}
     >
       <Link href="/order">
         <div>
@@ -40,7 +40,7 @@ const Navbar = () => {
             alt="logo"
             width={197}
             height={56}
-            className="h-[56px] object-contain"
+            className="h-[56px] w-fit object-contain"
           />
         </div>
       </Link>

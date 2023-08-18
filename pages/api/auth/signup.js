@@ -46,6 +46,7 @@ export default async function handler(req, res) {
         verified: false,
         userId,
         balance: 0,
+        spending: 0,
         referralCode: referral,
         referralBy: referralCode ? referralCode : null,
         referrals: [],

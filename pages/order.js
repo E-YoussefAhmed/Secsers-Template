@@ -101,7 +101,7 @@ const Order = () => {
   };
 
   return (
-    <section className="flex  items-center flex-1 overflow-y-auto flex-col pt-20 pb-60 px-10">
+    <section className="flex  items-center flex-1 overflow-y-auto flex-col pt-10 md:pt-20 pb-40 md:pb-60 px-10">
       <motion.h1
         initial={{ opacity: 0, y: 200 }}
         animate={{ opacity: 1, y: 0 }}
@@ -193,6 +193,12 @@ const Order = () => {
                   {filteredData &&
                     filteredData.map((el) => (
                       <Select.Option key={el.service} value={el.service}>
+                        {/* {`${el.name} $${el.rate * 1.1} ${
+                          el.type === "Custom Comments Package" ||
+                          el.type === "Package"
+                            ? "Per 1"
+                            : "Per 1K"
+                        }`} */}
                         {el.name}
                       </Select.Option>
                     ))}

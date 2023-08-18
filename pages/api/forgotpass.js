@@ -19,10 +19,6 @@ export default async function handler(req, res) {
     const { email } = req.body;
     try {
       const user = await User.findOne({ email });
-      if (!user.verified)
-        return res
-          .status(403)
-          .json({ message: "Your account is not verified!" });
       const code = await ForgotPass.find({
         email: user.email,
         expireAt: { $gt: Date.now() },

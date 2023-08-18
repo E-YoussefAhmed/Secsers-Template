@@ -80,7 +80,7 @@ const UserCard = ({
           </div>
           <button
             onClick={() => setShowChange(true)}
-            className="font-semibold text-lg opacity-60 hover:text-primary transition-colors duration-300"
+            className="w-[188px] px-4 py-2 bg-primary font-bold sm:text-2xl rounded-full mx-2 hover:opacity-60 transition-opacity duration-300"
           >
             Add
           </button>
