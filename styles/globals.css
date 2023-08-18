@@ -161,87 +161,77 @@ body {
 /* For the Production */
 
 /* The select div */
-.ant-select-show-search:where(
-    .css-dev-only-do-not-override-byeoj0
-  ).ant-select:not(.ant-select-customize-input)
-  .ant-select-selector,
-:where(.css-dev-only-do-not-override-byeoj0).ant-select-single:not(
+.ant-select-show-search:where(.css-byeoj0).ant-select:not(
     .ant-select-customize-input
   )
+  .ant-select-selector,
+:where(.css-byeoj0).ant-select-single:not(.ant-select-customize-input)
   .ant-select-selector {
   @apply cursor-pointer outline-none bg-input-secondary text-white rounded-lg h-10 border-none shadow-none flex;
 }
-:where(.css-dev-only-do-not-override-byeoj0).ant-select-single {
+:where(.css-byeoj0).ant-select-single {
   @apply w-[95%] bg-input-secondary rounded-lg;
 }
 /* The placeholder when menu is open */
-:where(.css-dev-only-do-not-override-byeoj0).ant-select-single.ant-select-open
+:where(.css-byeoj0).ant-select-single.ant-select-open
   .ant-select-selection-item {
   @apply text-white/25;
 }
 /* The input field */
-:where(.css-dev-only-do-not-override-byeoj0).ant-select-single:not(
-    .ant-select-customize-input
-  )
+:where(.css-byeoj0).ant-select-single:not(.ant-select-customize-input)
   .ant-select-selector
   .ant-select-selection-search-input {
   @apply h-10 p-2;
 }
 /* To align the placeholder in the middle */
-:where(
-    .css-dev-only-do-not-override-byeoj0
-  ).ant-select-single.ant-select-show-arrow
+:where(.css-byeoj0).ant-select-single.ant-select-show-arrow
   .ant-select-selection-item,
-:where(
-    .css-dev-only-do-not-override-byeoj0
-  ).ant-select-single.ant-select-show-arrow
+:where(.css-byeoj0).ant-select-single.ant-select-show-arrow
   .ant-select-selection-placeholder {
   @apply flex items-center;
 }
 /* The icon color */
-:where(.css-dev-only-do-not-override-byeoj0).ant-select .ant-select-arrow {
+:where(.css-byeoj0).ant-select .ant-select-arrow {
   @apply text-white;
 }
 /* The clear icon background */
-:where(.css-dev-only-do-not-override-byeoj0).ant-select .ant-select-clear {
+:where(.css-byeoj0).ant-select .ant-select-clear {
   @apply bg-input-secondary;
 }
 /* To hide border while hover */
-:where(.css-dev-only-do-not-override-byeoj0).ant-select:not(
-    .ant-select-disabled
-  ):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover
+:where(.css-byeoj0).ant-select:not(.ant-select-disabled):not(
+    .ant-select-customize-input
+  ):not(.ant-pagination-size-changer):hover
   .ant-select-selector {
   @apply border-none;
 }
 /* To hide border while active */
-.ant-select-focused:where(.css-dev-only-do-not-override-byeoj0).ant-select:not(
-    .ant-select-disabled
-  ):not(.ant-select-customize-input):not(.ant-pagination-size-changer)
+.ant-select-focused:where(.css-byeoj0).ant-select:not(.ant-select-disabled):not(
+    .ant-select-customize-input
+  ):not(.ant-pagination-size-changer)
   .ant-select-selector {
   @apply border-none shadow-none;
 }
 /* The dropdown menu */
-:where(.css-dev-only-do-not-override-byeoj0).ant-select-dropdown {
+:where(.css-byeoj0).ant-select-dropdown {
   @apply bg-input-secondary;
 }
 /* The Item div while active */
-:where(.css-dev-only-do-not-override-byeoj0).ant-select-dropdown
+:where(.css-byeoj0).ant-select-dropdown
   .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
   @apply text-white bg-primary/70;
 }
 /* The Item div while selected */
-:where(.css-dev-only-do-not-override-byeoj0).ant-select-dropdown
+:where(.css-byeoj0).ant-select-dropdown
   .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
   @apply text-white bg-primary;
 }
 /* The Item div active and not */
-:where(.css-dev-only-do-not-override-byeoj0).ant-select-dropdown
-  .ant-select-item {
+:where(.css-byeoj0).ant-select-dropdown .ant-select-item {
   @apply text-base font-bold text-white border-white border p-4;
 }
 /* The Item text active and not */
-:where(.css-dev-only-do-not-override-byeoj0).ant-select-dropdown
-  .ant-select-item-option-content {
+:where(.css-byeoj0).ant-select-dropdown .ant-select-item-option-content {
   overflow: initial;
   white-space: initial;
   text-overflow: initial;
