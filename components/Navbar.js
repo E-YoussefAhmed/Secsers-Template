@@ -36,7 +36,7 @@ const Navbar = () => {
       <Link href="/order">
         <div>
           <Image
-            src="/logo1.png"
+            src="/icon.svg"
             alt="logo"
             width={197}
             height={56}
