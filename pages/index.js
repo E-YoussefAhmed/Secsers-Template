@@ -117,7 +117,7 @@ export default function Home({ users, orders }) {
           <div className="flex items-center">
             <Link href="/">
               <Image
-                src="/logo1.png"
+                src="/icon.svg"
                 alt="logo"
                 width={197}
                 height={56}
