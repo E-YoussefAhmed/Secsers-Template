@@ -17,11 +17,11 @@ const Footer = () => {
       <div className="text-center text-sm lg:text-base p-4 bg-gradient-secondary tracking-wider">
         2023 &copy;{" "}
         <a
-          href="https://scorpions-store.vercel.app/"
+          href="https://devlab-tech.com"
           target="_blank"
           className="text-primary"
         >
-          Scorpions Team
+          DevLab
         </a>
         , All Right Reserved
       </div>
